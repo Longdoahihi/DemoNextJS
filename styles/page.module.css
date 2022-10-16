@@ -1,0 +1,6 @@
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #c7d3d752;
+    position: relative;
+}

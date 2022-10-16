@@ -1,0 +1,79 @@
+.main{
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    top: 100px;
+}
+
+.layout__above{
+}
+.layout__above__left{
+    padding: 10px;
+    object-fit: contain;
+}
+.image__main{
+    /* width: 444px;
+    height: 444px; */
+}
+.layout__above__right{
+}
+.layout__below{
+}
+
+.brand{
+    font-size: 13px;
+}
+.name {
+    font-size: 24px;
+}
+.price{
+    font-size: 32px;
+    color: red;
+}
+
+.btn_select {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.btn_option:hover .btn_select{
+    display: block;
+}
+.btn_option{
+    font-size: 10px;
+    background-color: #c7d3d752;
+    color: black;
+    border: 1px solid transparent;
+    position: relative;
+    padding: 12px 8px;
+    margin: 0px 10px 10px 0px ;
+}
+
+.btn_option_icon{
+    position: absolute;
+    font-size: 10px;
+    color: white;
+    top: 1px;
+    right: 1px;
+}
+
+.btn_back_icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-top: 11px solid green;
+    border-right: 11px solid green;
+    border-bottom: 11px solid transparent;
+    border-left: 11px solid transparent;
+}
