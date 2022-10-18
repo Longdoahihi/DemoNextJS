@@ -30,6 +30,9 @@
   font-size: 8px;
 }
 
+.active_option{
+  display: block !important;
+}
 
 /*
 // Default

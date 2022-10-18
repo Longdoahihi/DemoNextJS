@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 
 function Product(props) {
     const router = useRouter();
-    function cardOnClick(){
-        const path = '/products/' + props.pr.id ;
+    function cardOnClick() {
+        const path = '/products/' + props.pr.id;
         router.push(path);
     }
     return (
@@ -24,9 +24,12 @@ function Product(props) {
                         spacing={0.5}
                     >
                         <Rating name="read-only" value={2} readOnly />
-                        <Typography>Đã bán {props.pr.attributes.all_time_quantity_sold}</Typography>
+                        <Typography>{props.pr.attributes.all_time_quantity_sold? ("Đã bán "+props.pr.attributes.all_time_quantity_sold) : ""}</Typography>
                     </Stack>
-                    <Typography className={styles.products__price}>{props.pr.attributes.price} &#x20AB;</Typography>
+                    <Typography className={styles.products__price}>
+                        {Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' })
+                            .format(props.pr.attributes.price)}
+                    </Typography>
                     <Stack
                         alignItems="center"
                         direction="row"

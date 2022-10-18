@@ -15,7 +15,6 @@ function Page({children}) {
                 <link rel="icon" href="/images/logo-bfd.ico" type="image/icon type"></link>
             </Head>
             <div className={styles.container}>
-                <Header/>
                 {children}
             </div>
         </>

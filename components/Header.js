@@ -8,9 +8,19 @@ import {
   faCartShopping,
   faSearch
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from 'react';
 
 
-function Header() {
+function Header(props) {
+    const [keyword,setKeyword] = useState("");
+    function handleButtonFindClick(){
+        console.log("Giá trị: " + keyword)
+        props.findByKeyword(keyword)
+    }
+
+    const handleInputKeywordChange = (e) =>{
+        setKeyword(e.target.value);
+    }
     return (
         <div className={styles.header}>
             <div className={styles.header__inner}>
@@ -21,10 +31,11 @@ function Header() {
                     
                 </div>
                 <div className={styles.header__search}>
-                    <input className={styles.header__search__input} type='text' name='content_search' placeholder='Bạn muốn tìm sản phẩm gì?...' />
-                    <button className={styles.header__search__button} type='submit'>
+                    <input onChange={handleInputKeywordChange} className={styles.header__search__input} type='text' name='content_search' placeholder='Bạn muốn tìm sản phẩm gì?...' />
+                    <button onClick={handleButtonFindClick} className={styles.header__search__button} type='submit'>
                         <FontAwesomeIcon icon={faSearch} className={`fa-solid fa-magnifying-glass ${styles.search__icon}`} />
-                        Tìm Kiếm</button>
+                        Tìm Kiếm
+                    </button>
                 </div>
                 <div className={styles.header__card}>
                     <FontAwesomeIcon className={`fa-solid fa-cart-shopping ${styles.header__card__icon}`}  icon={faCartShopping} />
