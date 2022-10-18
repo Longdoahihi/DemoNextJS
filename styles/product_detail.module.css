@@ -1,13 +1,16 @@
 .main{
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    width: 100vw; 
+}
+.inner{
     width: 1240px;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    position: relative;
-    z-index: 1;
-    top: 100px;
+    
 }
-
 .layout__above{
 }
 .layout__above__left{
@@ -20,8 +23,7 @@
 }
 .layout__above__right{
 }
-.layout__below{
-}
+
 
 .brand{
     font-size: 13px;
@@ -32,6 +34,10 @@
 .price{
     font-size: 32px;
     color: red;
+    padding: 32px;
+    background-color: #c7d3d752;
+    border-radius: 20px;
+    max-width: 300px;
 }
 
 .btn_select {
@@ -76,4 +82,39 @@
     border-right: 11px solid green;
     border-bottom: 11px solid transparent;
     border-left: 11px solid transparent;
+}
+
+.font_14px{
+    font-size: 14px;
+}
+
+.btn_buy{
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    min-width: 300px;
+    height: 48px;
+    font-size: 15px;
+}
+.btn_buy:hover{
+    background-color: red;
+    opacity: 0.5;
+}
+ /* Nội dung thuộc tính sản phẩm  */
+.layout__below{
+    background-color: #c7d3d752;
+}
+.table_spec{
+    background-color: white;
+    margin-top: 20px !important;
+    
+}
+.row_spec{
+    background-color: #dde9ec52;
+}
+.col_tilte{
+    background-color: #EFEFEF;
+    color: #4F4F4F;
+    width: 220px;
+    font-size: 13px;
 }
